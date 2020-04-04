@@ -144,15 +144,15 @@ for rows in sheet_all_data:
                     "label": [lab,labKR]})
             # print("\n")
 
-# needCreateList
+needCreateList
 
 #%%
 # Execute create all card I needed...
 
-# for item in needCreateList:
-#     create_card(item)
+for item in needCreateList:
+    create_card(item)
 
-print("Finish")
+print("\n===Finish!!===\n")
 
 
 #%% 
