@@ -12,11 +12,10 @@ import sys
 import matplotlib.pyplot as plt
 
 root_dir = os.path.dirname(os.path.abspath("__file__"))
-root_dir = root_dir + "\IRR\example.xlsx"
+file = os.path.join(root_dir,"IRR/example.xlsx")
 
-print(root_dir)
-
-df_data = pd.read_excel(root_dir)
+df_data = pd.read_excel(file)
+df_data
 
 #%%
 
@@ -38,7 +37,7 @@ plt.scatter(x,                      # x軸資料
             s = 50,                 # 點大小
             alpha = 1,              # 透明度
             marker = "D")           # 點樣式
-plt.savefig("./IRR/IRR_example.jpg")        #儲存圖檔
+plt.savefig("./IRR/IRR_example.png")        #儲存圖檔
 plt.show
 
 #%%
