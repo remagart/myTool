@@ -6,19 +6,20 @@ Created on TUE AUG 4 16:49:00 2020
 """
 #%%
 import os
+import shutil
 
 def getName(tag=""):
-    if(tag != ""):
+    if(tag != "" and tag != "1x"):
         tag = "@" + tag
+    if tag == "1x":
+        tag = ""
         
     MODEL_NAME = {
         # f"example{tag}.png": f"example_new{tag}.png",
-        f"aa{tag}.png": f"aaa{tag}.png",
-        f"bb{tag}.png": f"bbb{tag}.png",
+        
     }
     
     return MODEL_NAME
-
 
 def getAndroidPath():
     return [
@@ -41,33 +42,39 @@ root_dir = os.path.dirname(os.path.abspath("__file__"))
 img_dir = os.path.join(root_dir,"change_Android_IOS_pic_name/img")
 output_dir = os.path.join(root_dir,"change_Android_IOS_pic_name/output")
 
-files_dir = os.path.join(img_dir,getAndroidPath()[4])
-new_files_dir = os.path.join(output_dir,getAndroidPath()[4])
 
-print(files_dir)
+#%%
+
+def changeName(dir="",dir_n="",tag=""):
+    if dir != "" and dir_n != "":
+        for ori,new in getName(tag).items():
+            file = os.path.join(dir,ori)
+            file_new = os.path.join(dir_n,new)
+            
+            if(os.path.exists(file)):
+                if not os.path.isdir(dir_n):
+                    os.mkdir(dir_n)
+                
+                shutil.copyfile(file,file_new)
+                print("Rename successfully")
+            else:
+                print("File does NOT exist");
 
 
-print(files_dir)
-
+#%%
+files_dir = os.path.join(img_dir,getAndroidPath()[0])
 print(os.listdir(files_dir))
 
-#%%
-
-print(getName())
-for ori,new in getName().items():
-    file = os.path.join(files_dir,ori)
-    file_new = os.path.join(new_files_dir,new)
-    
-    if(os.path.exists(file)):
-        if not os.path.isdir(new_files_dir):
-            os.mkdir(new_files_dir)
-            
-        os.rename(file,file_new)
-        print("Rename successfully")
-    else:
-        print("File does NOT exist");
-
-
-#%%
-
 # %%
+for single_path in getAndroidPath():
+    files_dir = os.path.join(img_dir,single_path)
+    new_files_dir = os.path.join(output_dir,single_path)
+    changeName(files_dir,new_files_dir)
+
+for single_path in getIOSPath():
+    files_dir = os.path.join(img_dir,single_path)
+    new_files_dir = os.path.join(output_dir,single_path)
+    changeName(files_dir,new_files_dir,single_path)
+
+print("Finish!")
+#%%
