@@ -58,7 +58,7 @@ def changeName(dir="",dir_n="",tag=""):
                     # If it does NOT exist folder, it will be created
                     os.makedirs(dir_n)
                 
-                shutil.copyfile(file,file_new)
+                os.rename(file,file_new)
                 
                 # For integration of ios picture in the same folder
                 if tag == "2x" or tag == "3x":
