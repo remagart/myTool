@@ -16,7 +16,6 @@ def getName(tag=""):
         
     MODEL_NAME = {
         # f"example{tag}.png": f"example_new{tag}.png",
-        f"facebook{tag}.png": f"facebook444{tag}.png",
     }
     
     return MODEL_NAME
