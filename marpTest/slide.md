@@ -7,7 +7,7 @@ header:  '做簡報只要~~10分鐘~~，讓你*更專注於內容*'
 footer: '**Copyright 2021 Richard All rights reserved**'
 style: |
   footer {
-    text-align: end;color: rgb(30,30,30);padding-right: 80px;
+    text-align: end;color: rgb(30,30,30);padding-right: 80px;font-size:10px
   }
 ---
 <!-- _color: rgb(245,245,245) -->
@@ -64,10 +64,10 @@ style: |
 ---
 # 前言 - con't
 ### 傳統的思維方式是:
-1.  開啟 Office PowerPoint / Google Slide
-2.  開始一頁頁填上內容
-3.  進行排版
-4.  檢查
+* 1.  開啟 Office PowerPoint / Google Slide
+* 2.  開始一頁頁填上內容
+* 3.  進行排版
+* 4.  檢查
 
 ##### 其中「排版」是多數人卡住的環節，就算套用簡報模板還是必須進行排版。這真的是太花時間了!
 ---
@@ -75,10 +75,12 @@ style: |
 <br>
 <br>
 
-### 這裡提供另一種方式 — 用技術方式解決簡報排版問題。你不用怕這項技術會很難，它只有一個門檻：會寫 ***Markdown***
+### 這裡提供另一種方式 — 用技術方式解決簡報排版問題。你不用怕這項技術會很難，它只有一個門檻：
+
+* ### 會寫 ***Markdown***
 <br>
 
-##### 只要會寫Markdown，你已經學會了 50%!
+* ##### 只要會寫Markdown，你已經學會了 50%!
 ---
 # 誰適合使用這項工具?
 
@@ -155,19 +157,19 @@ Marp本身是一個開源專案，安裝VSCode的擴充功能，便能以雙欄�
 ---
 # 開始使用Marp
 
-- 打開VSCode並於最上方輸入，即可使用`Marp`(告訴VSCode說我們要開始使用Marp了!)
+* 打開VSCode並於最上方輸入，即可使用`Marp`(告訴VSCode說我們要開始使用Marp了!)
   ```
   ---
   marp: true
   ```
-- 使用`---`代表換下一頁
-- 支援Markdown語法，包含 `#`、`-`、`[超連結](網址)`、`:emoji:`、`粗體`、`斜體`、` ```code ` ...:spades: :hearts::diamonds::clubs::blush:
+* 使用`---`代表換下一頁
+* 支援Markdown語法，包含 `#`、`-`、`[超連結](網址)`、`:emoji:`、`粗體`、`斜體`、` ```code ` ...:spades: :hearts::diamonds::clubs::blush:
 
 [語法文件](https://marpit.marp.app/directives)
 
 ---
 # 開始使用Marp - con't
-- 設定Marp`預設參數` (整份Marp簡報開頭是使用`YAML`來設定)
+* 設定Marp`預設參數` (整份Marp簡報開頭是使用`YAML`來設定)
 ```yaml
 ---
 marp: true
@@ -178,7 +180,7 @@ header:  '做簡報只要~~10分鐘~~，讓你*更專注於內容*'
 footer: '**Copyright 2021 Richard All rights reserved**'
 style: |    # 視需求，設定CSS
   footer {
-    text-align: end;color: rgb(30,30,30);padding-right: 80px;
+    text-align: end;color: rgb(30,30,30);padding-right: 80px;font-size:10px
   }
 ---
 ```
@@ -206,8 +208,8 @@ style: |    # 視需求，設定CSS
 ![bg right](https://marpit.marp.app/assets/directives.png)
 
 - `<!-- 屬性 -->` vs  `<!-- _屬性 -->`
-- `<!-- 屬性 -->`: 此頁**後**都套用
-- `<!-- _屬性 -->`: **只有**此頁套用
+  * `<!-- 屬性 -->`: 此頁**後**都套用
+  * `<!-- _屬性 -->`: **只有**此頁套用
 
 ---
 # Marp實際操作
@@ -230,9 +232,9 @@ style: |    # 視需求，設定CSS
 <!-- _backgroundColor: #FFF -->
 <!-- _class: [lead] -->
 
-![bg opacity:0.8 right:80%](https://thumbor.forbes.com/thumbor/fit-in/416x416/filters%3Aformat%28jpg%29/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F5f4ebe0c87612dab4f12a597%2F0x0.jpg%3Fbackground%3D000000%26cropX1%3D292%26cropX2%3D3684%26cropY1%3D592%26cropY2%3D3987)
-![bg brightness:0.9](https://p4.pstatp.com/origin/pgc-image/1a2fbe7a78c444338842d6376d619595.jpeg)
-![bg brightness:0.8](https://storage.googleapis.com/opinion-cms-cwg-tw/article/202008/article-5f44866b0ad57.jpg)
+![bg opacity:0.5 right:80%](https://thumbor.forbes.com/thumbor/fit-in/416x416/filters%3Aformat%28jpg%29/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F5f4ebe0c87612dab4f12a597%2F0x0.jpg%3Fbackground%3D000000%26cropX1%3D292%26cropX2%3D3684%26cropY1%3D592%26cropY2%3D3987)
+![bg brightness:0.8](https://p4.pstatp.com/origin/pgc-image/1a2fbe7a78c444338842d6376d619595.jpeg)
+![bg opacity:0.5](https://storage.googleapis.com/opinion-cms-cwg-tw/article/202008/article-5f44866b0ad57.jpg)
 
 ---
 # 總結
